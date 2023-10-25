@@ -1,11 +1,11 @@
 // Import the 'pool' object so our helper functions can interact with the PostgreSQL database
 import { pool } from "../db/index.js";
 
-export async function getAnswers() {
-  // Query the database and return all Answers
+export async function getallTopics() {
+  // Query the database and return all allTopics
 
-  // Define the SQL query to fetch all Answers from the 'Answers' table
-  const queryText = "SELECT * FROM Answers"; // !!!! double check name matches db
+  // Define the SQL query to fetch all allTopics from the 'allTopics' table
+  const queryText = "SELECT * FROM allTopics"; // !!!! double check name matches db
 
   // Use the pool object to send the query to the database
   const result = await pool.query(queryText);
@@ -14,11 +14,11 @@ export async function getAnswers() {
   return result.rows;
 }
 
-export async function getAnswersById(id) {
+export async function getallTopicsById(id) {
   // Query the database and return the author with a matching id or null
 
-  // Define the SQL query to fetch the author with the specified id from the 'Answers' table
-  const queryText = "SELECT * FROM Answers WHERE id = $1";//need to make sure we get ALL of the answers with correct handles/ids
+  // Define the SQL query to fetch the author with the specified id from the 'allTopics' table
+  const queryText = "SELECT * FROM allTopics WHERE id = $1";
 
   // Use the pool object to send the query to the database
   // passing the id as a parameter to prevent SQL injection
