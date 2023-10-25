@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "nodemon -r dotenv/config server.js",
     "start": "node server.js",
-    "reset-database": "node -r dotenv/config db/reset-database.js"
+    "reset-database": "node -r dotenv/config db/reset-database.js",
+    "vitest": "vitest routes/quiz.test.js"
   },
   "keywords": [],
   "author": "",
