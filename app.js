@@ -1,11 +1,15 @@
 import express from "express";
 import morgan from "morgan";
+import cors from 'cors'
 
 import { questionsRoutes } from "./routes/questionsRoutes.js";
 import { answersRoutes } from "./routes/answersRoutes.js";
 import { allTopicsRoutes } from "./routes/allTopicsRoutes.js";
 
 export const app = express();
+app.use(cors({
+    origin:"*"
+  }))
 
 app.use(morgan("dev"));
 app.use(express.json());
