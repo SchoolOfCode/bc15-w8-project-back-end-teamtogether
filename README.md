@@ -1,1 +1,1 @@
-Feel free to delete this and start from scratch.
+Back-end for Team Together APP
