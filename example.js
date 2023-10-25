@@ -53,7 +53,7 @@
 
   //Useful commands
   SELECT question_id, name, question, topic, difficulty FROM allTopics INNER JOIN questions ON allTopics.id = questions.topic_id
-  SELECT question_id, name, question, topic, difficulty FROM allTopics AS t INNER JOIN questions AS q ON t.id = q.topic_id INNER JOIN answers AS a ON q.question_id = a.answer_id;
+ SELECT question_id, name, question, topic, difficulty, correctAnswer, wrongAnswer1, wrongAnswer2, wrongAnswer3 FROM allTopics AS t INNER JOIN questions AS q ON t.id = q.topic_id INNER JOIN answers AS a ON q.question_id = a.answer_id;
 
 
 
