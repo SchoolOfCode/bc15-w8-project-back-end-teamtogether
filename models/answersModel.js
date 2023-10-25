@@ -18,7 +18,7 @@ export async function getAnswersById(id) {
   // Query the database and return the author with a matching id or null
 
   // Define the SQL query to fetch the author with the specified id from the 'Answers' table
-  const queryText = "SELECT * FROM Answers WHERE id = $1";//need to make sure we get ALL of the answers with correct handles/ids
+  const queryText = "SELECT * FROM answers WHERE id = $1"; //need to make sure we get ALL of the answers with correct handles/ids
 
   // Use the pool object to send the query to the database
   // passing the id as a parameter to prevent SQL injection
