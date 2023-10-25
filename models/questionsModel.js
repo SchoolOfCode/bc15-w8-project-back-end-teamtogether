@@ -14,6 +14,8 @@ export async function getQuestions() {
   return result.rows;
 }
 
+// Functions all questions about a single topic (id) - frontend to then display a single question from returned object, and so on
+
 export async function getQuestionById(id) {
   // Query the database and return the author with a matching id or null
 

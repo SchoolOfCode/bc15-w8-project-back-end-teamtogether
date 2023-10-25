@@ -1,7 +1,7 @@
 // Import the 'pool' object so our helper functions can interact with the PostgreSQL database
 import { pool } from "../db/index.js";
 
-export async function getallTopics() {
+export async function getAllTopics() {
   // Query the database and return all allTopics
 
   // Define the SQL query to fetch all allTopics from the 'allTopics' table
@@ -14,7 +14,7 @@ export async function getallTopics() {
   return result.rows;
 }
 
-export async function getallTopicsById(id) {
+export async function getTopicById(id) {
   // Query the database and return the author with a matching id or null
 
   // Define the SQL query to fetch the author with the specified id from the 'allTopics' table
