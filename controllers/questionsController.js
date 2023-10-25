@@ -28,3 +28,9 @@ export async function getQuizByTopicId(req, res) {
   }
   res.status(200).json({ status: "success", data: quiz });
 }
+
+export async function newQuestion(req, res) {
+  const data = req.body;
+  const question = await questionsModel.newQuestion(data);
+  res.status(201).json({ status: "success", data: question });
+}

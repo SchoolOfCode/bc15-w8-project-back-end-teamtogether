@@ -46,10 +46,15 @@ export async function getQuizByTopicId(id) {
 export async function newQuestion(new_question) {
   // Query the database to create an question and return the newly created question and answer
   //Create query to insert new question into database
-  const queryText = "INSERT INTO questions (question, topic, difficulty) VALUES ($1, $2, $3) RETURNING *";
-  //Store 
-  const values = [new_question.question, new_question.topic, new_question.difficulty];
-  const result = await pool.query(queryText, values);
-  return result || null;
-}
+  const queryQuestion =
+    "INSERT INTO questions (question, topic, difficulty) VALUES ($1, $2, $3) RETURNING *";
+  //Store
+  const values = [
+    new_question.question,
+    new_question.topic,
+    new_question.difficulty,
+  ];
 
+  const result = await pool.query(queryQuestion, values);
+  return result.rows[0] || null;
+}
