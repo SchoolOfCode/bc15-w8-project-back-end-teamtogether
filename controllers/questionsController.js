@@ -1,7 +1,7 @@
 import * as questionsModel from "../models/questionsModel.js";
 
 export async function getQuestions(req, res) {
-  const questions = await authorsModel.getQuestions();
+  const questions = await questionsModel.getQuestions();
   res.status(200).json({ status: "success", data: questions });
 }
 
