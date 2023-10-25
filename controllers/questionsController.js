@@ -16,3 +16,15 @@ export async function getQuestionById(req, res) {
   }
   res.status(200).json({ status: "success", data: question });
 }
+
+export async function getQuizByTopicId(req, res) {
+  const id = req.params.id;
+  const quiz = await questionsModel.getQuizByTopicId(id);
+  // Assume 404 status if the quiz is not found
+  if (!quiz) {
+    return res
+      .status(404)
+      .json({ status: "fail", data: { msg: "quiz not found" } });
+  }
+  res.status(200).json({ status: "success", data: quiz });
+}

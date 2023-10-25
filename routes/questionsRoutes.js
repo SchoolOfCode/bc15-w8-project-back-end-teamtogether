@@ -7,3 +7,5 @@ export const questionsRoutes = express.Router();
 questionsRoutes.get("/", questionsController.getQuestions);
 
 questionsRoutes.get("/:id", questionsController.getQuestionById);
+
+questionsRoutes.get("/quiz/:id", questionsController.getQuizByTopicId);
