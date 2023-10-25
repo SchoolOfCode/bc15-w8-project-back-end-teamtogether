@@ -1,3 +1,9 @@
+
+
+
+
+
+
 /*CREATE TABLE allTopics (
       id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
       name VARCHAR
@@ -35,11 +41,11 @@
   (4, 'How do you start a Node.js server?', 'Node.js', 'Easy');
 
    INSERT INTO answers (answer_id, correctAnswer, wrongAnswer1, wrongAnswer2, wrongAnswer3) VALUES
-  (1, '', '', '', ''),
-  (2, '', '', '', ''),
-  (3, '', '', '', ''),
-  (4, '', '', '', ''),
-  (5, '', '', '', ''),
+  (1, 'A runtime environment for executing JavaScript code outside of a browser', 'A programming language', 'A web browser', 'An operating system'),
+  (2, 'sql (SQL)', 'fs (File System)', 'http (HTTP)', 'path (Path)'),
+  (3, 'Using the require function ','Using the import keyword', 'Using the include keyword', 'Using the import function'),
+  (4, 'All of the above (Promises, Callbacks, Async/await)','Promises','Callbacks', 'Async/await'),
+  (5, 'Using the node server.js command in the terminal', 'Opening a web browser', 'Using the npm start command', 'Node.js servers start automatically when the file is executed');
   
 
 
