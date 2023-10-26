@@ -43,18 +43,59 @@ export async function getQuizByTopicId(id) {
   return result.rows || null;
 }
 
-export async function newQuestion(new_question) {
-  // Query the database to create an question and return the newly created question and answer
-  //Create query to insert new question into database
-  const queryQuestion =
-    "INSERT INTO questions (question, topic, difficulty) VALUES ($1, $2, $3) RETURNING *";
-  //Store
-  const values = [
-    new_question.question,
-    new_question.topic,
-    new_question.difficulty,
-  ];
+// export async function newQuestion(new_question) {
+//   // Query the database to create an question and return the newly created question and answer
+//   //Create query to insert new question into database
+//   const queryQuestion =
+//     "INSERT INTO questions (question, topic, difficulty) VALUES ($1, $2, $3) RETURNING *";
+//   //Store
+//   const values = [
+//     new_question.question,
+//     new_question.topic,
+//     new_question.difficulty,
+//   ];
 
-  const result = await pool.query(queryQuestion, values);
-  return result.rows[0] || null;
+//   const result = await pool.query(queryQuestion, values);
+//   return result.rows[0] || null;
+// }
+
+export async function newQuestion(new_question) {
+  const client = await pool.connect();
+
+  try {
+    // Query to insert new question into database
+    const queryQuestion =
+      "INSERT INTO questions (question, topic, difficulty) VALUES ($1, $2, $3) RETURNING *";
+    // const topic_id = 7; // specific id for user questions
+    const values = [
+      new_question.question,
+      new_question.topic,
+      new_question.difficulty,
+    ];
+
+    const questionResult = await client.query(queryQuestion, values);
+    const question = questionResult.rows[0];
+    console.log(question);
+
+    // Query to insert new answer into database
+    const queryAnswer =
+      "INSERT INTO answers (answer_id, correctanswer, wronganswer1, wronganswer2, wronganswer3) VALUES ($1, $2, $3, $4, $5) RETURNING *";
+    const answerValues = [
+      question.question_id,
+      new_question.correctanswer,
+      new_question.wronganswer1,
+      new_question.wronganswer2,
+      new_question.wronganswer3,
+    ];
+
+    const answerResult = await client.query(queryAnswer, answerValues);
+    const answer = answerResult.rows[0];
+
+    return { question, answer };
+  } catch (error) {
+    throw error;
+  } finally {
+    // Make sure to release the client back to the pool
+    client.release();
+  }
 }
