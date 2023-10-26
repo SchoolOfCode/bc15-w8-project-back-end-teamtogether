@@ -63,3 +63,51 @@ test("Check get all answers function - GET /answers", async () => {
   expect(response.body.status).toEqual("success");
   expect(Array.isArray(response.body.data)).toBeTruthy();
 });
+
+test("Checking create new question - POST /questions/userquestion", async function () {
+  await resetDatabase();
+  
+  const postData = {
+    question: "testing3",
+    topic: "test4",
+    difficulty: "hard",
+    correctanswer: "This is the correct answer",
+    wronganswer1: "1",
+    wronganswer2: "2",
+    wronganswer3: "3"
+  };
+
+  const response = await supertest(app)
+    .post("/questions/userquestion")
+    .send(postData)
+    .set("Accept", "application/json");
+
+  //Send POST request from postData object
+  
+  // check response.body
+  expect(typeof response.body).toBe("object");
+  expect(response.body).toEqual({
+   status:"success",
+    data: {
+      question: {
+        topic_id: 7,
+        question_id: 6,
+        question: "testing3",
+        topic: "test4",
+        difficulty: "hard"
+      },
+      answer: {
+        answer_id: 6,
+        correctanswer: "This is the correct answer",
+        wronganswer1: "1",
+        wronganswer2: "2",
+        wronganswer3: "3"
+      }
+    }
+  });
+  //response status that says 201
+  expect(response.status).toBe(201);
+  //response header that is application.json
+  expect(response.headers["content-type"]).toContain("application/json");
+
+});
