@@ -74,4 +74,4 @@ export async function resetDatabase() {
   }
 }
 
-// await resetDatabase();
+await resetDatabase();
