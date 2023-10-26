@@ -43,31 +43,16 @@ export async function getQuizByTopicId(id) {
   return result.rows || null;
 }
 
-// export async function newQuestion(new_question) {
-//   // Query the database to create an question and return the newly created question and answer
-//   //Create query to insert new question into database
-//   const queryQuestion =
-//     "INSERT INTO questions (question, topic, difficulty) VALUES ($1, $2, $3) RETURNING *";
-//   //Store
-//   const values = [
-//     new_question.question,
-//     new_question.topic,
-//     new_question.difficulty,
-//   ];
-
-//   const result = await pool.query(queryQuestion, values);
-//   return result.rows[0] || null;
-// }
-
 export async function newQuestion(new_question) {
   const client = await pool.connect();
 
   try {
     // Query to insert new question into database
     const queryQuestion =
-      "INSERT INTO questions (question, topic, difficulty) VALUES ($1, $2, $3) RETURNING *";
-    // const topic_id = 7; // specific id for user questions
+      "INSERT INTO questions (topic_id, question, topic, difficulty) VALUES ($1, $2, $3, $4) RETURNING *";
+    const topic_id = 7; // specific id for user questions
     const values = [
+      topic_id,
       new_question.question,
       new_question.topic,
       new_question.difficulty,

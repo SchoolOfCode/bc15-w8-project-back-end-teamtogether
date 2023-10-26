@@ -41,10 +41,11 @@ export async function resetDatabase() {
     INSERT INTO allTopics (name) VALUES
     ('Intro to Javascript'),
     ('Debugging/DOM'),
-    ('Rest Apis'),
+    ('Rest APIs'),
     ('Node.js'),
     ('Databases'),
-    ('Testing');
+    ('Testing'),
+    ('User Questions');
     `);
 
     await pool.query(`
