@@ -1,5 +1,8 @@
 # Back-end for TestTogether application
 
+<img width="467" alt="Screenshot 2023-11-19 at 10 23 43" src="https://github.com/SchoolOfCode/bc15-w8-project-back-end-teamtogether/assets/93056794/6cb48d26-ff98-4b44-b33e-e6adf1bdbf48">
+
+
 ## 💼 The brief
 
 To develop a full-stack web application that solves a problem for bootcampers as a team of 6.
