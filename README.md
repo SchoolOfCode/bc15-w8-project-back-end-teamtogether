@@ -32,11 +32,11 @@ We had a problem with connecting the front-end to the back-end and realised CORS
 
 ## 📡 Technologies used
 
-| Design: Figjam & Figma
-| Planning: Trello
-| Front-end: HTML, CSS, JavaScript
-| Back-end: Node.js, Express, ThunderClient
-| Testing: Vitest 
+- Design: Figjam & Figma
+- Planning: Trello
+- Front-end: HTML, CSS, JavaScript
+- Back-end: Node.js, Express, ThunderClient
+- Testing: Vitest 
 
 
 ## 🛠️ Installation
@@ -59,11 +59,12 @@ Create a `.env` file in the root folder. The environment variables it should hav
 
 ## Improvements
 
-- Allow users to choose level of difficulty, number of questions and time for each quiz.
+- Allow users to choose level of difficulty, number of questions and time for each quiz
 - Implement end-to-end testing via Playwright
 - Improve the accessibility of the app 
 - Implement user authorization and login feature
-- Dynamically generate graphs that display a user's quiz results over a period of time
+- Dynamically generate graphs that display user's quiz results over a period of time
+
 
 
 ## Demo 
