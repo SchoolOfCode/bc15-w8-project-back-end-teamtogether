@@ -16,7 +16,10 @@ Our app, TestTogether, enables users to select quizzes from a curated list of to
 
 We crafted a simple team manifesto outlining our shared values, principles, and goals to guide us throughout the project 📕
 
-We drew up plans for a simple MVP encompassing all the important features for our app. Add MVP image
+<img width="433" alt="Screenshot 2023-11-19 at 09 14 52" src="https://github.com/SchoolOfCode/bc15-w8-project-back-end-teamtogether/assets/93056794/55e41d42-a881-4b07-b684-2a3fbb2cc060">
+
+
+We drew up plans for a simple MVP encompassing all the important features for our app. 
 
 With the plans finalised, we started with the design phase by creating a wireframe in Figma 🎨 
 Once we were all happy with the design, layout and color scheme for the app, we organized the team into pairs of 3 and started working on different areas of the app. 
@@ -48,8 +51,8 @@ Run `npm install` in the terminal.
 
 Create a `.env` file in the root folder. The environment variables it should have:
 
-PORT
-DATABASE_CONNECTION_STRING
+- PORT
+- DATABASE_CONNECTION_STRING
 
 💡 Start the server using `npm run dev`.
 
@@ -63,6 +66,12 @@ DATABASE_CONNECTION_STRING
 
 
 ## Demo 
+
+
+
+
+https://github.com/SchoolOfCode/bc15-w8-project-back-end-teamtogether/assets/93056794/fa1588a5-a39b-4202-948c-a2957ad96a63
+
 
 
 
