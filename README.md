@@ -30,8 +30,8 @@ Once we were all happy with the design, layout and color scheme for the app, we 
 
 ## 🤔 What did I learn from it
 
-My understanding of REST APIS, API endpoints and the communication between frontend and backend was reinforced. 
-We had a problem with connecting the front-end to the back-end and realised CORS was the culprit. After some digging around, came to the conclusion that we have to use "*" as the origin in the CORS middleware. This allows any website to make requests to our server and retrieve data. 
+- My understanding of REST APIS, API endpoints and the communication between frontend and backend was reinforced. 
+- We had a problem with connecting the front-end to the back-end and realised CORS was the culprit. After some digging around, came to the conclusion that we have to use "*" as the origin in the CORS middleware. This allows any website to make requests to our server and retrieve data. 
 
 
 ## 📡 Technologies used
