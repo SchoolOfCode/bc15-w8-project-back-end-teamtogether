@@ -1,4 +1,4 @@
-# Back-end for Team Together APP
+# Back-end for TestTogether application
 
 ## 💼 The brief
 
@@ -16,7 +16,7 @@ Our app, TestTogether, enables users to select quizzes from a curated list of to
 
 We crafted a simple team manifesto outlining our shared values, principles, and goals to guide us throughout the project 📕
 
-<img width="433" alt="Screenshot 2023-11-19 at 09 14 52" src="https://github.com/SchoolOfCode/bc15-w8-project-back-end-teamtogether/assets/93056794/55e41d42-a881-4b07-b684-2a3fbb2cc060">
+<img width="300" alt="Screenshot 2023-11-19 at 09 14 52" src="https://github.com/SchoolOfCode/bc15-w8-project-back-end-teamtogether/assets/93056794/55e41d42-a881-4b07-b684-2a3fbb2cc060">
 
 
 We drew up plans for a simple MVP encompassing all the important features for our app. 
@@ -59,6 +59,7 @@ Create a `.env` file in the root folder. The environment variables it should hav
 
 ## Improvements
 
+- Allow users to choose level of difficulty, number of questions and time for each quiz.
 - Implement end-to-end testing via Playwright
 - Improve the accessibility of the app 
 - Implement user authorization and login feature
